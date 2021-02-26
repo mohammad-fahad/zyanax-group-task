@@ -1,4 +1,5 @@
 import React from 'react'
+import search from '../../assets/loupe.png'
 
 function Header() {
     return (
@@ -19,7 +20,9 @@ function Header() {
                     <span className="mx-3">|</span>
                     <p>Best Seller</p>
                    <div className="col-md-3 ml-auto">
-                   <input type="text" placeholder="Search" className="form-control py-3 bg-light"  />
+                       
+                   <input type="text" placeholder="Search" className="form-control py-3 bg-light"  style={{position: 'relative'}}/>
+                   <img src={search} style={{position: 'absolute', marginTop: '-3vh', height: '50%', marginLeft: '19.3vw'}} alt=""/>
                    </div>
 
                 </div>

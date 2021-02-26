@@ -1,0 +1,48 @@
+$dash : 1px dashed black;
+$theme-color: #00B55B;
+
+
+
+
+#first-row{
+    margin-top: 2vh;
+}
+.left-section{
+    border-radius: 15px 15px 0 0
+}
+.radius{
+    border-radius: 20px;
+}
+.dashed{    
+    border-bottom: $dash;
+}
+.pointer{
+    cursor: pointer;
+}
+.side-font{
+    font-weight: 700;
+}
+.unique-btn{
+    border-radius: 0 30px 30px 30px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;     
+    
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background:$theme-color;     
+    border-radius: 20px;
+    
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: seagreen; 
+    
+  }
+ 

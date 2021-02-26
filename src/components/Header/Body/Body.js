@@ -11,6 +11,8 @@ import TextsWithRadioBtn from '../../ReusableComponents/TextsWithRadioBtn';
 import Fabric from '../../FakeData/Fabric';
 import Pattern from '../../FakeData/Pattern';
 import Services from '../../FakeData/Services';
+import '../../../Style/style.scss'
+import search from '../../../assets/loupe.png'
 
 
 function Body() {
@@ -18,18 +20,20 @@ function Body() {
 
     return (
         <div>
-            <div className="row">
-                <div className="col-md-3" style={{marginTop:"2vh"}}>
-                    <div className="border p-3" style={{borderRadius: "15px 15px 0 0"}}>
+            <div id="first-row" className="row">
+                <div className="col-md-3" >
+                    <div className="border p-3 left-section">
+                        <div className="dashed pb-4">
                         <h6><strong>Filters</strong></h6>
-                        <p className="text-muted border p-2" style={{borderRadius: "20px", width: "6vw"}}>Out of Stock</p>
-                        <p className="text-muted border p-2" style={{borderRadius: "20px", width: "4vw"}}>Size: XL</p>
-                        <Button variant="outline-success" style={{borderRadius: "20px", width: "5vw"}}>Clear All</Button>
+                        <p className="text-muted border p-2 w-50 text-center radius" >Out of Stock</p>
+                        <p className="text-muted border p-2 w-50 text-center radius" >Size: XL</p>
+                        <Button variant="outline-success w-50 text-center radius" >Clear All</Button>
                         <br/>
+                        </div>
                                             
-                        <div className="my-4 d-flex justify-content-between" style={{borderTop:'1px dashed black', borderBottom:'1px dashed black'}}>
-                       <strong style={{cursor:'pointer'}}>
-                       <Collapsible trigger="Category" style={{cursor: "pointer", fontWeight: "bold"}} className="my-3"> 
+                        <div className="my-4 d-flex justify-content-between dashed">
+                       <strong className="pointer">
+                       <Collapsible trigger="Category"  className="my-3 pointer"> 
                         
                         <p className='pl-1'>Men's Clothing</p>
                         <div className="d-flex justify-content-between">
@@ -42,11 +46,15 @@ function Body() {
                        </strong>
                         <i class="fa fa-caret-down" aria-hidden="true"></i>   
                         </div>
-                        <div style={{borderBottom:'1px dashed black'}} className="mb-4">
-                        <strong style={{cursor:'pointer'}}>
+                        <div className="mb-4 dashed">
+                        <strong className="pointer">
                         <Collapsible trigger="Brand" className="py-3">
-                           <input type="text" className="form-control my-1" placeholder="Search by brands"/>
+                           
                            <Scrollbars style={{ width: 380, height: 400}}>
+                           <div className="my-3 px-4">
+                           <input type="text" className="form-control my-1" placeholder="Search by brands" style={{position: "relative"}}/>
+                           <img src={search} style={{position: 'absolute', marginTop: '-3vh',  marginLeft: '15.6vw'}} alt=""/>
+                           </div>
                            {
                                    Brands.map((brand, i) => 
                                    <TextsWithRadioBtn data={brand} i={i} />
@@ -59,7 +67,7 @@ function Body() {
                         </Collapsible>
                         </strong>
                         </div>
-                        <div style={{borderBottom:'1px dashed black'}} className="mb-4">
+                        <div  className="mb-4 dashed">
                         <strong style={{cursor:'pointer'}}>
                         <Collapsible trigger="Countries" className="py-3">                           
                            <Scrollbars style={{ width: 380, height: 250}}>
@@ -74,7 +82,7 @@ function Body() {
                         </Collapsible>
                         </strong>
                         </div>
-                        <div style={{borderBottom:'1px dashed black'}} className="mb-4">
+                        <div  className="mb-4 dashed">
                        <strong style={{cursor:'pointer'}}>
                        <Collapsible trigger="Size" className="py-3">
                             <div className="row text-center py-3">
@@ -96,26 +104,26 @@ function Body() {
                         </Collapsible>   
                        </strong>
                         </div>
-                        <div style={{borderBottom:'1px dashed black'}} className="mb-4">
+                        <div  className="mb-4 dashed">
                       <strong style={{cursor:'pointer'}}>
                       <Collapsible trigger="Color" className="py-3">
                             <div className="row text-center py-3">
-                                <div className="col-md-2 border p-3" style={{backgroundColor:"black"}}></div>
-                                <div className="col-md-2 border" style={{backgroundColor:"#6F3E18"}}></div>
-                                <div className="col-md-2 border" style={{backgroundColor:"#D4BE8D"}}>                                    
+                                <div className="col-md-2 col-sm-2 col-xs-2 border p-3" style={{backgroundColor:"black"}}></div>
+                                <div className="col-md-2 col-sm-2 col-xs-2 border" style={{backgroundColor:"#6F3E18"}}></div>
+                                <div className="col-md-2 col-sm-2 col-xs-2 border" style={{backgroundColor:"#D4BE8D"}}>                                    
                                 </div>
-                                <div className="col-md-2 border" style={{backgroundColor:"#838383"}}>                                
+                                <div className="col-md-2 col-sm-2 col-xs-2 border" style={{backgroundColor:"#838383"}}>                                
                                 </div>
-                                <div className="col-md-2 border" style={{backgroundColor:"white"}}>                                
+                                <div className="col-md-2 col-sm-2 col-xs-2 border" style={{backgroundColor:"white"}}>                                
                                 </div>
-                                <div className="col-md-2 border" style={{backgroundColor:"#0F73AD"}}>
+                                <div className="col-md-2 col-sm-2 col-xs-2 border" style={{backgroundColor:"#0F73AD"}}>
                                
                                 </div>
                             </div>
                         </Collapsible>  
                         </strong> 
                         </div>
-                        <div style={{borderBottom:'1px dashed black'}} className="mb-4">
+                        <div  className="mb-4 dashed">
                         <strong style={{cursor:'pointer'}}>
                         <Collapsible trigger="Discount" className="py-3">                           
                            <Scrollbars style={{ width: 380, height: 150}}>
@@ -131,19 +139,19 @@ function Body() {
                         </strong>
                         
                         </div>
-                        <div style={{borderBottom:'1px dashed black'}} className="mb-4">
-                            <h6 style={{fontWeight:"700"}}>Price</h6>
+                        <div  className="mb-4 dashed">
+                            <h6 className="side-font">Price</h6>
                             <div className="d-flex flex wrap pb-5 container">
                                 <input type="text" className="form-control w-25" placeholder="Min"/>
                                 <span className="mx-2">-</span>
                                 <input type="text" className="form-control w-25" placeholder="Max"/>
                                 <div className="ml-auto">
-                                <button className="btn btn-success" style={{borderRadius:'0 30px 30px 30px'}}> > </button>
+                                <button className="btn btn-success unique-btn"> > </button>
                                 </div>
                             </div>
                         </div>
-                        <div style={{borderBottom:'1px dashed black'}} className="mb-4">
-                        <h6 className="mb-3" style={{fontWeight:"700"}}>Rating</h6>
+                        <div className="mb-4 dashed">
+                        <h6 className="mb-3 side-font" >Rating</h6>
                                <div className="d-flex mb-4">
                                    <input type="radio"/>
                                    <i class="fa fa-star pl-4 text-success" aria-hidden="true"></i>
@@ -179,7 +187,7 @@ function Body() {
                                    
                                </div>
                         </div>
-                        <div style={{borderBottom:'1px dashed black'}} className="mb-4">
+                        <div  className="mb-4 dashed">
                         <strong style={{cursor:'pointer'}}>
                         <Collapsible trigger="Fabric" className="py-3">                           
                            <Scrollbars style={{ width: 380, height: 250}}>
@@ -194,7 +202,7 @@ function Body() {
                         </Collapsible>
                         </strong>
                         </div>
-                        <div style={{borderBottom:'1px dashed black'}} className="mb-4">
+                        <div className="mb-4 dashed">
                         <strong style={{cursor:'pointer'}}>
                         <Collapsible trigger="Pattern" className="py-3">                           
                            <Scrollbars style={{ width: 380, height: 250}}>
@@ -209,7 +217,7 @@ function Body() {
                         </Collapsible>
                         </strong>
                         </div>
-                        <div style={{borderBottom:'1px dashed black'}} className="mb-4">
+                        <div className="mb-4 dashed">
                         <strong style={{cursor:'pointer'}}>
                         <Collapsible trigger="Services" className="py-3">                           
                            <Scrollbars style={{ width: 380, height: 100}}>
@@ -222,19 +230,19 @@ function Body() {
                         </Collapsible>
                         </strong>
                         </div>
-                        <div style={{borderBottom:'1px dashed black'}} className="mb-4">
-                        <h6 className="mb-3" style={{fontWeight:"700"}}>Clothing Style</h6>
+                        <div className="mb-4 dashed">
+                        <h6 className="mb-3 side-font" >Clothing Style</h6>
                         </div>
-                        <div style={{borderBottom:'1px dashed black'}} className="mb-4">
-                        <h6 className="mb-3" style={{fontWeight:"700"}}>Men's Trend</h6>
+                        <div className="mb-4 dashed">
+                        <h6 className="mb-3 side-font">Men's Trend</h6>
                         </div>
-                        <div style={{borderBottom:'1px dashed black'}} className="mb-4">
-                        <h6 className="mb-3" style={{fontWeight:"700"}}>Fit Type</h6>
+                        <div className="mb-4 dashed">
+                        <h6 className="mb-3 side-font" >Fit Type</h6>
                         </div>
                         
                     </div>
                 </div>
-                <div className="col-md-9 d-flex flex-wrap justify-content-between " >
+                <div className="col-md-9 d-flex flex-wrap justify-content-between" >
                     {
                         fakeData.map((data, i) => <Products data={data} key={i}/>)
                     }
