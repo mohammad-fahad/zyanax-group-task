@@ -15,13 +15,14 @@ import '../../../Style/style.scss'
 import search from '../../../assets/loupe.png'
 
 
+
 function Body() {
     const number = [{n:1}, {n:2}, {n:3}, {n:4}, {n:5}, {n:6}, {n:7}, {n:8}, {n:9}, {n:10}]
-
+    
     return (
         <div>
             <div id="first-row" className="row">
-                <div className="col-md-3" >
+                <div className="col-md-3 col-sm-6 col-xs-12" >
                     <div className="border p-3 left-section">
                         <div className="dashed pb-4">
                         <h6><strong>Filters</strong></h6>
@@ -54,12 +55,14 @@ function Body() {
                            <div className="my-3 px-4">
                            <input type="text" className="form-control my-1" placeholder="Search by brands" style={{position: "relative"}}/>                           
                            </div>
+                           
                            {
                                    Brands.map((brand, i) => 
                                    <TextsWithRadioBtn data={brand} i={i} />
                                   
                                    )
                                }
+                           
                                </Scrollbars>                     
                                 <h5 className="text-success py-3"><strong>236 MORE</strong></h5>
 
@@ -190,7 +193,7 @@ function Body() {
                         <strong style={{cursor:'pointer'}}>
                         <Collapsible trigger="Fabric" className="py-3">                           
                            <Scrollbars style={{ width: 380, height: 250}}>
-                           {
+                            {
                                    Fabric.map((fab, i) => 
                                     <TextsWithRadioBtn data={fab} i={i} />
                                    )
@@ -201,6 +204,7 @@ function Body() {
                         </Collapsible>
                         </strong>
                         </div>
+                       
                         <div className="mb-4 dashed">
                         <strong style={{cursor:'pointer'}}>
                         <Collapsible trigger="Pattern" className="py-3">                           
