@@ -52,8 +52,7 @@ function Body() {
                            
                            <Scrollbars style={{ width: 380, height: 400}}>
                            <div className="my-3 px-4">
-                           <input type="text" className="form-control my-1" placeholder="Search by brands" style={{position: "relative"}}/>
-                           <img src={search} style={{position: 'absolute', marginTop: '-3vh',  marginLeft: '15.6vw'}} alt=""/>
+                           <input type="text" className="form-control my-1" placeholder="Search by brands" style={{position: "relative"}}/>                           
                            </div>
                            {
                                    Brands.map((brand, i) => 
@@ -242,9 +241,9 @@ function Body() {
                         
                     </div>
                 </div>
-                <div className="col-md-9 d-flex flex-wrap justify-content-between" >
+                <div className="col-md-9 col-sm-6 col-xs-12 d-flex flex-wrap justify-content-center" >
                     {
-                        fakeData.map((data, i) => <Products data={data} key={i}/>)
+                        fakeData.map((data, i) => <Products  data={data} key={i}/>)
                     }
                     <div className="m-auto p-5" >
                     <Pagination>

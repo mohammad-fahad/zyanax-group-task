@@ -7,7 +7,7 @@ import { Card } from 'react-bootstrap'
 function Products({data}) {
     return (
         <div className="my-1 justify-content-center">
-            <Card style={{ width: '20rem', height: '92%', borderRadius: "15px", padding: '7%'}}>   
+            <Card style={{ width: '20rem', height: '92%', borderRadius: "15px", padding: '7%', overFlow: 'hidden'}}>   
               <Card.Img variant="top" src={data.img} style={{maxHeight: '25vh', padding: '0px 8%'}}/>
               <Card.Body>
                 <Card.Text style={{fontSize: '1.2rem'}}>{data.dis} </Card.Text>

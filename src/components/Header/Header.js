@@ -1,5 +1,6 @@
 import React from 'react'
 import search from '../../assets/loupe.png'
+import "../../Style/style.scss"
 
 function Header() {
     return (
@@ -21,8 +22,7 @@ function Header() {
                     <p>Best Seller</p>
                    <div className="col-md-3 ml-auto">
                        
-                   <input type="text" placeholder="Search" className="form-control py-3 bg-light"  style={{position: 'relative'}}/>
-                   <img src={search} style={{position: 'absolute', marginTop: '-3vh', height: '50%', marginLeft: '19.3vw'}} alt=""/>
+                   <input type="text" placeholder="Search" className="form-control py-3 bg-light"  style={{position: 'relative'}}/>                 
                    </div>
 
                 </div>

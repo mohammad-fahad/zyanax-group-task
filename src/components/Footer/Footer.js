@@ -41,8 +41,8 @@ function Footer() {
                 <img src={zDrop} alt="" style={{width:'95%'}}/>
             </div>
             <div className="col-md-4">
-               <div className="container px-5">
-               <div className="container">
+               <div className="container container-fluid px-5">
+               <div className="container container-fluid">
                 {
                     social.map((icon, i) =>
                        
@@ -55,25 +55,25 @@ function Footer() {
                 <p style={{fontSize:'1.3rem'}}>Get the latest news from zDrop</p>
                 <input type="email" className='form-control bg-light' placeholder="Enter your email address"/>
                </div>
-                <div className="row mt-5">
-                    <div className="col-md-3">
+                <div className="row mt-5 text-center">
+                    <div className="col-md-3 col-sm-12 col-xs-12">
                         <h6>About zDrop</h6>
                         
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-3 col-sm-12 col-xs-12">
                         <h6>FAQ & Support</h6>
                         
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-3 col-sm-12 col-xs-12">
                         <h6>Terms & Conditions</h6>
                         
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-3 col-sm-12 col-xs-12">
                         <h6>Privacy Policy</h6>
                         
                     </div>
                 </div>
-                <div className="row mt-4">
+                <div className="row mt-4 text-center">
                     <div className="col-md-2">
                         <img src={bkask} alt=""/>
                     </div>
@@ -94,7 +94,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="col-md-4" style={{marginTop: "12vh", fontSize: "1.2rem"}}>
+            <div className="col-md-4 justify-content-center" style={{marginTop: "12vh", fontSize: "1.2rem"}}>
                 <h4>CONTACT US</h4>
                 <div className="d-flex flex-wrap my-2">
                     <div>
